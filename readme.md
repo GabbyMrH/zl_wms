@@ -4,7 +4,7 @@
 #### 后端部分:`laravel6.x及相关扩展包(可在composer.json中查看)`
 #### 前端部分：`vue2.6、element-ui、vue-router、axios、sass、webpack`
 PS:
-1. 目前我忙于其他开发工作，且现在前后端分离为主流开发方式，所以该项目仅适用想学习适用`laravel`结合`vue`组件化开发`SPA`应用的同学参考。
+1. 目前我忙于其他开发工作，且现在前后端分离为主流开发方式，所以该项目仅适用想学习使用`laravel`结合`vue`组件化开发`SPA`应用的同学参考。
 目前只完成了仓库设置、商品入库功能;
 2. 该项目若存在一些问题，请不吝赐教；
 3. 接下来我将会推出一套后端采用：`lumen+dingoAPI+jwt-Auth`以及前端完全分离采用`vue-cli`的形式构建和开发一套完整版的wms系统并进行开源，敬请期待。
@@ -26,7 +26,7 @@ PS:
 #### 编辑入库单
 ![edit-inbound](/public/img/edit-inbound.png)
 
-## 环境依赖
+## 🏠环境依赖
 
 * php 7.2.X
 * nginx 1.13.x
