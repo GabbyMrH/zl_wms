@@ -1,0 +1,95 @@
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+//css reset
+@import 'reset';
+
+/* 满屏布局 */
+html,
+body,
+#app {
+    /*统一设置高度为100%*/
+    height: 100%;
+
+    #index>.el-container>.el-aside a {
+        color: #fff;
+        display: inline-block;
+        text-decoration: none;
+    }
+}
+
+/* bread样式*/
+.bread {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 0 0 20px 0;
+    padding-left: 10px;
+    background-color: #fff;
+}
+
+.main {
+    background-color: #fff;
+
+    .inbound-date-select{
+        align-self: flex-start;
+        margin-top: 20px;
+    }
+    .button-style {
+        margin: 20px 10px 20px 0;
+        align-self: flex-end;
+    }
+    .inbound-header-search{
+        width: 450px;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: 150px;
+    }
+    .inbound-header-search .el-select .el-input{
+        width: 130px;
+    }
+    .el-table {
+        th {
+            color: #333;
+            background-color: #d3dce6;
+        }
+    }
+
+    .main-table {
+        .pagination {
+            margin: 20px auto;
+        }
+    }
+}
+
+/* 顶部消息通知按钮 */
+.header-notify-item {
+
+    //margin-top: 10px;
+    //margin-right: 40px;
+    sup {
+        top: 15px !important;
+        right: 15px !important;
+    }
+}
+
+/* 下拉菜单 */
+.el-dropdown-link {
+    cursor: pointer;
+}
+
+.el-icon-arrow-down {
+    font-size: 12px;
+}
+/* 入库表格 */
+.inbound-table-expand {
+    font-size: 0;
+  }
+  .inbound-table-expand label {
+    width: 90px;
+    color: #99a9bf;
+  }
+  .inbound-table-expand .el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 50%;
+  }
