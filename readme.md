@@ -1,74 +1,76 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+## ZL_WMS
+***
+这是一套基于`laravel6.x` + `vue2.6.10` + `element-ui`,使用组件化所开发的<u><b>半成品</b></u>`wms SPA`系统，当前使用技术有：
+#### 后端部分:`laravel6.x及相关扩展包(可在composer.json中查看)`
+#### 前端部分：`vue2.6、element-ui、vue-router、axios、sass、webpack`
+PS:
+1. 目前我忙于其他开发工作，且现在前后端分离为主流开发方式，所以该项目仅适用想学习适用`laravel`结合`vue`组件化开发`SPA`应用的同学参考。
+目前只完成了仓库设置、商品入库功能;
+2. 该项目若存在一些问题，请不吝赐教；
+3. 接下来我将会推出一套后端采用：`lumen+dingoAPI+jwt-Auth`以及前端完全分离采用`vue-cli`的形式构建和开发一套完整版的wms系统并进行开源，敬请期待。
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## 🏞大体图示
+***
+#### 仓库设置
+![warehouse](/public/img/warehouse.png)
 
-## About Laravel
+#### 商品入库
+![in-bound](/public/img/in-bound.png)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### 入库展开项
+![inbound-detail](/public/img/inbound-detail.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+#### 入库表单
+![inbound-dialog](/public/img/inbound-dialog.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### 编辑入库单
+![edit-inbound](/public/img/edit-inbound.png)
 
-## Learning Laravel
+## 环境依赖
+***
+* php 7.2.X
+* nginx 1.13.x
+* mysql5.7
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 📥部署步骤
+***
+1. 克隆项目 
+``` git clone git@github.com:GabbyMrH/zl_wms.git ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. 切换到项目目录执行：
+``` composer install ```
 
-## Laravel Sponsors
+3. 将项目根目录下的`.env.example`改为`.env`，该文件为环境配置文件
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+4. 生成 APP_KEY：
+``` php artisan key:generate ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+如果您是用nginx，可能需要设置一下该配置:
+``` try_files $uri $uri/ /index.php?$query_string; ```
 
-## Contributing
+5. 配置您的IP或域名指向项目的`public`目录，然后在浏览器输入您配置的域名或IP即可访问了。不出意外的话，点击商品入库应该如下所示：
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![inbound-empty](/public/img/inbound-empty.png)
 
-## Security Vulnerabilities
+PS：
+1. 如果您想看到数据显示效果的话，尝试在控制台执行:
+``` php artisan migrate:refresh --seed ```
+2. 现在再去刷新页面就能看到我通过`laravel $fake`预设的虚拟数据了。
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 📔目录结构
+***
+* 整体目录结构可以参考[laravel6.x目录结构官网](https://laravel.com/docs/6.x/structure/);
+* 需要注意的是，由于该项目采用的是vue组件化开发，所以新增了组件目录，位于`resources/js/components/`,您需要找的组件都位于此;
 
-## License
+## 🔧二开规范
+***
+* 需要您对laravel框架开发有基本的掌握，以及对`vue.js`、`vue-router`、`axios`、`webpack`等技术有一定的基础。
+* 所有的前端页面路由都通过`vue-router`进行定义和配置的，位于
+```resources/js/app.js ```内
+* 所有的数据操作都是以API的形式传递的，路由配置当然是位于我们laravel的``` routers/api.php ```内啦。
+* 您可能会偶然发现里面有一些测试的代码(比如生成二维码和条形码的扩展包啊、还有封装起来的验证码生成和验证的api接口啊)以及`jwt-auth`，其实这并未启用，当然也不会影响您的使用，您可以随意更改;
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 👏欢迎提出建议或与我交流
+
+作者邮箱是：<a href="mailto:gabbymrh@gmail.com" target="_blank">gabbymrh@gmail.com</a>
+
