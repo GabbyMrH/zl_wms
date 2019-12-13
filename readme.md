@@ -32,7 +32,7 @@ PS:
 * nginx 1.13.x
 * mysql5.7
 
-## 📥部署步骤
+## 📥安装步骤
 
 1. 克隆项目 
 ``` git clone git@github.com:GabbyMrH/zl_wms.git ```
@@ -72,5 +72,5 @@ PS：
 
 ## 👏欢迎提出建议或与我交流
 
-作者邮箱是：<a href="mailto:gabbymrh@gmail.com" target="_blank">gabbymrh@gmail.com</a>
+作者邮箱：<a href="mailto:gabbymrh@gmail.com" target="_blank">gabbymrh@gmail.com</a>
 
