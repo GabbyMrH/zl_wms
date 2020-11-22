@@ -289,7 +289,8 @@ export default {
         if (!this.inboundHeadSelect) {
           this.$notify.warning({
             title: "消息",
-            message: "请先选择内容！"
+            message: "请先选择内容！",
+            type:info
           });
           return;
         }

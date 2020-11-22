@@ -318,7 +318,8 @@ __webpack_require__.r(__webpack_exports__);
         if (!this.inboundHeadSelect) {
           this.$notify.warning({
             title: "消息",
-            message: "请先选择内容！"
+            message: "请先选择内容！",
+            type: info
           });
           return;
         } //若已选获取下拉框所选内容并筛选当前数据

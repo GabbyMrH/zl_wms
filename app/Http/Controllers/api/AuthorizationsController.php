@@ -16,7 +16,7 @@ class AuthorizationsController extends Controller
         //用户可以使用邮箱或手机号登录
         filter_var($username, FILTER_VALIDATE_EMAIL) ?
             $credentials['email'] = $username : $credentials['phone'] = $username;
-        $credentials['password'] = $request->password;
+            $credentials['password'] = $request->password;
 
         //验证用户信息
         //Auth::guard('api')与config目录的auth下的guards->api对应

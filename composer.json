@@ -20,6 +20,7 @@
         "tymon/jwt-auth": "1.0.0-rc.5"
     },
     "require-dev": {
+        "davidhsianturi/laravel-compass": "^0.5.1",
         "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.4",
         "laravel/ui": "^1.1",
